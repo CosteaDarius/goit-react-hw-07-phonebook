@@ -5,21 +5,21 @@ import { addContact } from "../redux/contactsSlice";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [phone, setPhone] = useState("");
   const dispatch = useDispatch();
-  const contacts = useSelector((state) => state.contacts);
+  const contacts = useSelector((state) => state.contacts.items);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+    if (contacts.some((contact) => contact.name.toLowerCase() === name.toLowerCase())) {
       alert(`${name} is already in contacts.`);
       return;
     }
 
-    dispatch(addContact({ id: nanoid(), name, number }));
+    dispatch(addContact({ id: nanoid(), name, phone }));
     setName("");
-    setNumber("");
+    setPhone("");
   };
 
   return (
@@ -29,10 +29,10 @@ const ContactForm = () => {
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
       </label>
       <label>
-        Number:
-        <input type="tel" value={number} onChange={(e) => setNumber(e.target.value)} required />
+        Phone Number:
+        <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit">Add Contact</button>
     </form>
   );
 };

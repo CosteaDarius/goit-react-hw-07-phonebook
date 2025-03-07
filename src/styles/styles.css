@@ -1,44 +1,85 @@
+/* Centrare conținut */
 .container {
-    width: 400px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .contact-form input {
-    padding: 5px;
-    margin-top: 5px;
-  }
-  
-  .contact-form button {
-    margin-top: 10px;
-    padding: 8px;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-  
-  .contact-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-list li {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-  }
-  
-  .contact-list button {
-    margin-left: 5px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: red;
-    color: white;
-  }
-  
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Formular */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: bold;
+}
+
+.contact-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Lista de contacte */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.contact-list button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.contact-list button:hover {
+  background-color: darkred;
+}
+
+/* Filtrare */
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
